@@ -6,9 +6,6 @@ const { API_KEY } = process.env;
 const axios = require('axios');
 const {Videogame, Genre} = require('../db');
 
-
-
-
 const router = Router();
 
 // Configurar los routers
@@ -16,25 +13,31 @@ const router = Router();
 
 const getApiInfo = async () =>{
     
-    const apiUrl = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`,{headers: {
-        "accept-encoding": null,
-    }})
-    const apiInfo = await apiUrl.data.results.map( e => {
-        return {
-            id: e.id,
-            name: e.name,
-            description: e.description,
-            image: e.background_image,
-            released: e.released,
-            rating: e.rating,
-            platforms: e.platforms,
-            genres: e.genres,
-        };
-        
-    });
-    return apiInfo;
+    try {
+        var total = [];
+        for (let i = 1; i <= 5; i++) {
+          const urlApi = await axios.get(
+            `https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`
+          );
+          let infoApi = urlApi.data.results.map((e) => {
+            return {
+              id: e.id,
+              name: e.name,
+              description: e.description_raw,
+              release_date: e.release_date,
+              rating: e.rating,
+              plataform: e.platforms.map((e) => e.platform.name),
+              image: e.background_image,
+              genre: e.genres?.map((e) => e.name),
+            };
+          });
+          total = total.concat(infoApi);
+        }
+        return total;
+      } catch (error) {
+        console.log(error);
+      }
     };
-
     const getDbInfo = async () =>{
         return await Videogame.findAll({
             include: Genre,
@@ -85,51 +88,62 @@ const getApiInfo = async () =>{
 
     
 
-router.get('/genres', async (req, res) =>{
-    const genresApi = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`);
-    const genres = await genresApi.data.results.map(e => e.name)
- 
-    
-
-    genres.forEach(e => Genre.findOrCreate({ //lo uso para guardar los generos que me traje de la API en la base de datos
-        where: {name: e} //
-    }))
-
-    const allGenres = await Genre.findAll() //me traigo todos los generos que guarde en mi db
-    res.json(allGenres)
-})
-
-
-  
-//   router.post('/videogame', async (req, res) => {
-//     let {
-//       name,
-//       released,
-//       rating,
-//       image,
-//       genres,
-//       platforms,
-//       description,
-//       createdInDb
-//     } = req.body
-  
-//     let gameCreated = await Videogame.create({
-//       name,
-//       released,
-//       rating,
-//       image,
-//       platforms,
-//       description,
-//       createdInDb
-//     })
-  
-//     let genreDb = await Genres.findAll({
-//       where: { name: genres }
-//     })
-//     gameCreated.addGenre(genreDb)
-//     res.send("Videogame creado con exito!")
-//   })
-  
+    router.get("/genres", async (req, res) => {
+        try {
+          const genreVideo = await axios.get(
+            `https://api.rawg.io/api/genres?key=${API_KEY}`
+          );
+          const apiGenre = genreVideo.data.results.map((e) => e.name);
+          apiGenre.forEach((e) => {
+            Genre.findOrCreate({
+              where: { name: e },
+            });
+          });
+          const totalGenre = await Genre.findAll();
+          res.status(200).json(totalGenre);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+      
+      router.post("/videogames", async (req, res) => {
+        const { name, description, release_date, rating, plataform, genre, image } =
+          req.body;
+        try {
+          let CreatteGame = await Videogame.create({
+            name,
+            description,
+            release_date,
+            rating,
+            plataform, 
+            genre,
+            image,
+          });
+          let gByGame = await Genre.findAll({
+            where: { name: genre },
+          });
+          CreatteGame.addGenre(gByGame);
+          res.status(200).json({ message: "Videogame created!" });
+        } catch (error) {
+          res.status(404).json({ message: "Invalid data" });
+        }
+      });
+      
+      
+      
+      router.delete("/videogames/:id", async(req,res)=>{
+        try {
+          const {id}=req.params;
+          const borrar = await Videogame.findByPk(id);
+          if(borrar){
+            await borrar.destroy()
+            return res.send("game deleted")
+          }
+          res.status(404).send("cant deleted this game")
+        } catch (error) {
+            console.log(error)
+        }
+      })
 
   
 module.exports = router;

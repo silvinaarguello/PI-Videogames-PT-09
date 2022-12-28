@@ -18,21 +18,33 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    background_image: {
-      type: DataTypes.STRING,
+     release_date: {
+      type: DataTypes.DATEONLY,
+      defaultValue: DataTypes.NOW,
       allowNull: false,
-    },
-    released: {
-      type: DataTypes.STRING,
     },
     rating: {
-      type: DataTypes.INTEGER,
-      
-    },
-    platforms:{
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.FLOAT,
       allowNull: false,
-    },
+      },
+      plataform: {
+        type: DataTypes.ARRAY(DataTypes.JSONB
+          ),
+        allowNull: false,
+        defaultValue: [],
+      },
+      genre:  {
+        type: DataTypes.ARRAY(DataTypes.JSONB
+          ),
+        allowNull: false,
+        defaultValue: [],
+      },
+
+      image:{
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      
     createInDb:{
       type: DataTypes.BOOLEAN,
       allowNull: false,
