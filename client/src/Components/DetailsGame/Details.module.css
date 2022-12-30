@@ -1,0 +1,138 @@
+
+.detailName2{
+    color: white;
+    display: block;
+    background-color: #ca1ec1 ;
+    width: 100%;
+    height: 4 5px;
+    margin-top: 30px;;
+    
+}
+
+.im2{
+    width: 1000px;
+    height: 450px;
+    border-style:inset;
+    border-color: rgb(255, 214, 127);
+    margin-top: -18px;
+}
+
+.m {
+    background-image: url(https://www.masgamers.com/wp-content/uploads/2021/02/gap6.jpg);
+    position: fixed;
+    top: 0;
+    left:0;
+      bottom:0;
+      right: 0;
+      color: #ffffff;
+      overflow-y: scroll;
+    font-size: 14px
+  }
+  .m::after{
+    content: "";
+    background-color: rgb(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left:0;
+      bottom:0;
+      right: 0;
+  }
+  
+  .m> h1,
+  .m> p{
+    text-align: center;
+    
+  
+    position: relative;
+  }
+
+  .nq{
+    background-color: r#1E9BCA ;
+    max-width: 1000px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px -1px 10px 5px teal;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .plt{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+
+  .span2{
+    margin: 0em 0.5em
+}
+
+.descr{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttton{
+    font-size:25px;
+    background-color:lightseagreen;
+    left: 0px;
+    bottom: 0px;
+    position: relative;
+    height: 70px;
+    width: 1000px;
+    cursor: pointer;
+    top: 3px;
+  }
+
+  
+
+  .buttton2{
+    font-size:25px;
+    background-color:rgb(255, 166, 0);
+    left: 0px;
+    bottom: 0px;
+    position: relative;
+    height: 70px;
+    width: 1000px;
+    cursor: pointer;
+  }
+
+  
+  .genr{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+
+  .loader{
+    font-size: 5rem;
+    color: white;
+    position: relative;
+  }
+
+  .loader span {
+    mix-blend-mode: difference;
+  }
+  
+.loader::after{
+  content: '';
+  position: absolute;
+  height: calc(100% - 40px);
+  left: 0;
+  top: 20px;
+  width: 30%;
+  background-color: white;
+  z-index: -1;
+  color: black;
+  overflow: hidden;
+  animation: animate 4s infinite linear;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(250px);
+  }
+}
