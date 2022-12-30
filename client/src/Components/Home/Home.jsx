@@ -17,6 +17,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import Paginate from "../Paginate/Paginate";
 import NotFoundVideoGame from "../NotFoundGame/NotFoundVideoGame";
  import Loading from "../Loading";
+ import NavBar from "../NavBar/navBar";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -83,6 +84,7 @@ export default function Home() {
 
   return (
     <div className={s.a}>
+      <NavBar/>
       <div className={s.a}>
         <div className={s.padre}></div>
 

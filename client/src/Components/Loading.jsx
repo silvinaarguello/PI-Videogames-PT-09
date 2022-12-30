@@ -5,7 +5,7 @@ export default function Loading() {
     return (
         <div className={s.gif}>
         <img
-          src="https://phoneky.co.uk/thumbs/screensavers/down/games/pacman_o349lxiw.gif"
+          src="https://www.olympicvideogames.com/sonic/assets/img/loading.gif"
           alt="Loading"
         />
 

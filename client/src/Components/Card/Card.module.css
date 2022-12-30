@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     overflow: hidden;
     justify-content: center;
-    color: green;
+    color: rgb(202, 203, 93);
     width: 380px;
    
     
@@ -25,12 +25,14 @@
 }
 
 .image2 {
-    width: 200px;
-    height:150px;
+    width: 350px;
+    height:300px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px goldenrod;
+    border: solid 5px goldenrod;
+    
+    
     border-radius:20px;
     margin-top: 10px;
 }
