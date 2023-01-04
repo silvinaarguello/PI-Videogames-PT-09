@@ -166,7 +166,7 @@ export default function Home() {
           
         </div>
 
-        <div className={s.cc}>
+        <div className={s.card}>
           {currentGames?.length > 0 && !loading ? (
             currentGames?.map((e) => {
               return (

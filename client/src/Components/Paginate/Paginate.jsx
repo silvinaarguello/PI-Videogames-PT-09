@@ -9,15 +9,17 @@ export default function Paginado({ gamesPage, allGames, paginado }) {
   }
 
   return (
-    <div className={s.pag4}>
+    <nav className={s.nav_container}>
+       <ul className={s.ul_container}>
       {pageNumbers &&
         pageNumbers.map((number, i) => (
-          <ul className={s.ull} key={i}>
-            <button className={s.pag3} onClick={() => paginado(number)}>
+          <li className={s.li_container} key={i}>
+            <button  onClick={() => paginado(number)}>
               {number}
             </button>
-          </ul>
+          </li>
         ))}
-    </div>
+        </ul>
+    </nav>
   );
 }

@@ -7,7 +7,7 @@ export default function Card({ image, name, rating, genre, id }) {
   return (
     <div>
       <div className={s.cards2}>
-        <div className="card">
+        <div className={s.cards}>
           <Link className={s.NavLink} to={"/videogames/" + id}>
             <div>
               <img
