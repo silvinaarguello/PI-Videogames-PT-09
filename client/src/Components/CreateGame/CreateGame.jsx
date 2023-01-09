@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { postVideoGames, getGenres, getPlataforms } from "../../Redux/actions";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import s from "./CreateGame.module.css";
+import "./CreateGameStyle.css";
 
 export default function Form() {
   const myHistory = useHistory();
@@ -106,21 +106,21 @@ export default function Form() {
   }
 
   return (
-    <div className={s.main}>
+    <div className="main">
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className={s.goHome}>
+        <div className="main-content">
           <Link to="/home">
-            <button className={s.selectfont3}>GO HOME</button>
+            <button className="selectfont3">GO HOME</button>
           </Link>
-          <h3 className={s.name2}>CREATE NEW VIDEOGAME</h3>
+          <h3 className="name2">CREATE NEW VIDEOGAME</h3>
           <br></br>
 
           <div>
             <label>Name </label>
-            {errores.name && <p className={s.alert}>{errores.name}</p>}
+            {errores.name && <p className="alert">{errores.name}</p>}
             <br></br>
             <input
-              className={s.name}
+              className="name"
               type="text"
               name="name"
               placeholder="..."
@@ -131,11 +131,11 @@ export default function Form() {
           <div>
             <label>Release </label>
             {errores.release_date && (
-              <p className={s.alert}>{errores.release_date}</p>
+              <p className="alert">{errores.release_date}</p>
             )}
             <br></br>
             <input
-              className={s.name}
+              className="name"
               type="date"
               name="release_date"
               onChange={(e) => captureValue(e)}
@@ -144,10 +144,10 @@ export default function Form() {
 
           <div>
             <label>Rating </label>
-            {errores.rating && <p className={s.alert}>{errores.rating}</p>}
+            {errores.rating && <p className="alert">{errores.rating}</p>}
             <br></br>
             <input
-              className={s.name}
+              className="name"
               type="text"
               name="rating"
               placeholder="1-5"
@@ -159,24 +159,24 @@ export default function Form() {
             <label>Image url </label>
             <br></br>
             <input
-              className={s.name}
+              className="name"
               type="url"
               name="image"
               placeholder="URL"
               onChange={(e) => captureValue(e)}
             />
-            {errores.image && <p className={s.alert}>{errores.image}</p>}
+            {errores.image && <p className="alert">{errores.image}</p>}
             <br></br>
           </div>
 
           <div>
-            <label className={s.name2}>GENRES </label>
+            <label className="name2">GENRES </label>
             {genres.map((g) => {
               return (
                 
-                  <div className={s.in} key={g}>
+                  <div className="in" key={g}>
                     <input
-                      className={s.input}
+                      className="input"
                       value={g}
                       type="checkbox"
                       name="genre"
@@ -187,18 +187,18 @@ export default function Form() {
                 
               );
             })}
-            {errores.genre && <p className={s.alert2}>{errores.genre}</p>}
+            {errores.genre && <p className="alert2">{errores.genre}</p>}
           </div>
 
           <div>
-            <label className={s.name2}>PLATFORMS </label>
+            <label className="name2">PLATFORMS </label>
 
             {finalPlataforms.map((p) => {
               return (
                 
-                  <div className={s.in} key={p}>
+                  <div className="in" key={p}>
                     <input
-                      className={s.input}
+                      className="input"
                       value={p}
                       type="checkbox"
                       name="plataform"
@@ -210,15 +210,15 @@ export default function Form() {
                 
               );
             })}
-            {errores.plataform && <p className={s.alert2}>{errores.plataform}</p>}
+            {errores.plataform && <p className="alert2">{errores.plataform}</p>}
           </div>
           <div>
             
 
-            <label className={s.name2}>Description: </label>
+            <label className="name2">Description: </label>
             <div>
               <textarea
-                className={s.comment}
+                className="comment"
                 type="text"
                 name="description"
                 placeholder="Type a description of your game"
@@ -227,7 +227,7 @@ export default function Form() {
                 onChange={(e) => captureValue(e)}
               />
               {errores.description && (
-                <p className={s.alert}>{errores.description}</p>
+                <p className="alert">{errores.description}</p>
               )}
             </div>
           </div>
@@ -239,11 +239,11 @@ export default function Form() {
           !errores.rating &&
           !errores.description &&
           !errores.image ? (
-            <button className={s.submit} type="submit">
+            <button className="submit" type="submit">
               Create Game
             </button>
           ) : (
-            <p className={s.alert}>
+            <p className="alert">
               {" "}
               Check the errors <br /> Before create VideoGame
             </p>

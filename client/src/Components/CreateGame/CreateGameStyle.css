@@ -1,0 +1,134 @@
+body{
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+  }
+  
+  .main {
+    background-image: url(../../Multimedia/fondoCreateGame.gif);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left:0;
+      bottom:0;
+      right: 0;
+      color: #ffffff;
+      overflow-y: scroll;
+    font-size: 24px
+  }
+  .main::after{
+    content: "";
+    background-color: rgba(62, 61, 43, 0.8);
+    position: fixed;
+    top: 0;
+    left:0;
+      bottom:0;
+      right: 0;
+  }
+  
+  .main> h1,
+  .main> p{
+    text-align: center;
+    font-family: 35px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .main-content {
+    background-color: rgb(27,27,50, .9);
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px -1px 10px 5px purple;
+  }
+  
+  .name2{
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    background-color: orange;
+    
+  }
+  .name, .comment {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+
+  
+  .comment {
+    min-height: 100px;
+  }
+ 
+  .submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #FCFF33;
+      border-radius: 80px;
+    cursor: pointer;
+    border: 0;
+    color: #060505;
+    font-size: 25px;
+  }
+  .as{
+   margin-top: 20px;
+    font-size: 13px;
+  }
+
+  .in {
+   float: left;
+
+  }
+  
+  .out{
+    float: right;
+  }
+ 
+  .alert{
+
+    display: block;
+    color: yellow;
+    font-size: 25px;
+  }
+
+  .alert2{
+
+    display: block;
+    color: yellow;
+    font-size: 25px;
+    padding-top: 430px;
+    margin-right: 0px;
+    margin-top: 80px;
+   
+  }
+
+  .input{
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0,5px;
+  }
+
+  

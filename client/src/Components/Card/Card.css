@@ -1,0 +1,102 @@
+
+.cards2{
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    justify-content: center;
+    color: green;
+    width: 380px;
+   
+    
+}
+
+
+
+.title2 {
+    margin: 5px;
+    padding: 5px;
+    text-align:center;
+    color: #f6f5ee;
+ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-shadow: -3px -3px 3px rgb(39, 10, 0), 3px 3px 3px rgb(39, 10, 0), -3px 3px 3px rgb(39, 10, 0), 3px -3px 3px rgb(39, 10, 0);
+}
+
+.image2 {
+    width: 200px;
+    height:150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px goldenrod;
+    border-radius:20px;
+    margin-top: 10px;
+}
+
+.genres2{
+    margin: 5px;
+    padding: 5px;
+    text-align:center;
+    color: #f6f5ee;
+ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-shadow: -3px -3px 3px rgb(66, 65, 5), 3px 3px 3px rgb(66, 65, 5), -3px 3px 3px rgb(66, 65, 5), 3px -3px 3px rgb(66, 65, 5);
+    
+}
+
+.rat{
+    margin: 5px;
+    padding: 5px;
+    text-align:center;
+    color: #f6f5ee;
+ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-shadow: -3px -3px 3px #000, 3px 3px 3px #000, -3px 3px 3px #000, 3px -3px 3px #000;
+    
+}
+
+.card{
+    
+   
+    justify-content: center;
+   
+    background-color: #6659df13;
+    text-decoration: none;
+    border-radius: 10px;
+    /* color: #7265e7; */
+    color:gold;
+    box-shadow: 0px 5px goldenrod;
+    transition: 500ms;
+    margin-left: 3em;
+    margin-right: 0.5em;
+    margin-top:0em;
+    margin-bottom: 2em;
+    height: 350px;
+    width: 355px;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+ .card:hover{
+   
+    transform: scale(1.05);
+    border: solid 2px #154360;
+    box-shadow: 0px 5px #154360;
+  
+    background-image: linear-gradient(to top, #154360 0%, #CA6F1E  100%);
+    
+ }
+
+
+.NavLink{
+    text-decoration: none;
+    
+}
+
+

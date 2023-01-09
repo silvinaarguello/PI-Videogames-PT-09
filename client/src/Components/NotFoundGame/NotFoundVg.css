@@ -1,0 +1,30 @@
+.image {
+    
+    object-fit: cover;
+    top: 0;
+    left: 0;
+   
+    align-content: center;
+    border-radius: 30px;
+    width: 2000px;
+    margin-left: 400px;
+
+    
+}
+
+.h1 {
+    font-size: 50px;
+    margin: 20px;
+    padding: 5px;
+    text-align:center;
+    color: #c5aa3d;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(
+      180deg,
+      rgba(11, 31, 10, 0.83) 0%,
+      rgba(129, 25, 25, 0.082) 100%
+    );
+    letter-spacing: 18px;
+    text-shadow: -4px -4px 2px rgb(0, 0, 0), 4px 4px 2px #000, -4px 4px 2px #000, 4px -4px 2px #000;
+   
+}

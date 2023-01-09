@@ -10,14 +10,13 @@ import {
   getPlataforms,
   orderByRating,
 } from "../../Redux/actions";
-import s from  "./Home.module.css";
+import   "./HomeStyle.css";
 import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 import SearchBar from "../SearchBar/SearchBar";
-import Paginate from "../Paginate/Paginate";
+import Paginado from "../Paginado/Paginado";
 import NotFoundVideoGame from "../NotFoundGame/NotFoundVideoGame";
- import Loading from "../Loading";
- import NavBar from "../NavBar/navBar";
+import Loading from "../Loading";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -83,32 +82,31 @@ export default function Home() {
   }
 
   return (
-    <div className={s.a}>
-      <NavBar/>
-      <div className={s.a}>
-        <div className={s.padre}></div>
+    <div className="a">
+      <div className="a">
+        <div className="padre"></div>
 
-        <div className={s.divFiltros}>
+        <div className="divFiltros">
           <Link to="/">
-            <button className={s.selectfont}>GO TO INITIAL PAGE</button>
+            <button className="selectfont">GO TO INITIAL PAGE</button>
           </Link>
-          <button className={s.selectfont} onClick={(e) => handleClick(e)}>
+          <button className="selectfont" onClick={(e) => handleClick(e)}>
             RELOAD GAMES
           </button>
 
           <Link to="/videogames">
-            <button className={s.selectfont}>CREATE NEW GAME</button>
+            <button className="selectfont">CREATE NEW GAME</button>
           </Link>
         </div>
         <br />
 
         <SearchBar />
-        <div className={s.divFiltros}>
+        <div className="divFiltros">
           
             <br />
             <select
               defaultValue={"DEFAULT"}
-              className={s.selectfont2}
+              className="selectfont2"
               onChange={(p) => handleSort(p)}
             >
               <option value="DEFAULT" disabled>
@@ -120,7 +118,7 @@ export default function Home() {
 
             <select
               defaultValue={"DEFAULT"}
-              className={s.selectfont2}
+              className="selectfont2"
               onChange={(p) => handlefilterCreated(p)}
             >
               <option value="DEFAULT" disabled>
@@ -133,7 +131,7 @@ export default function Home() {
 
             <select
               defaultValue={"DEFAULT"}
-              className={s.selectfont2}
+              className="selectfont2"
               onChange={(p) => handleSortRating(p)}
             >
               <option value="DEFAULT" disabled>
@@ -144,8 +142,8 @@ export default function Home() {
             </select>
 
             <select
-              defaultValue={s.sinFiltro}
-              className={s.selectfont2}
+              defaultValue={"sinFiltro"}
+              className="selectfont2"
               onChange={(p) => handleFilterGamesByGenre(p)}
             >
               <option value="sinFiltro">Genres</option>
@@ -166,7 +164,7 @@ export default function Home() {
           
         </div>
 
-        <div className={s.card}>
+        <div className="cc">
           {currentGames?.length > 0 && !loading ? (
             currentGames?.map((e) => {
               return (
@@ -190,7 +188,7 @@ export default function Home() {
           }
         </div>
 
-        <Paginate
+        <Paginado
           gamesPage={gamesPage}
           allGames={allGames?.length}
           paginado={paginado}

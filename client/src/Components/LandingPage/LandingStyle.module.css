@@ -1,0 +1,105 @@
+.landing{
+
+  background-image: url('../../Multimedia/animated-gif.webp');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  background-position-y: center;
+}
+
+.div{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.content {
+  margin: 9rem;
+  position: relative;
+  top: 20%;
+  left:50%
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 10em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left:-40%;
+  top:10%;
+
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #c3e4ea;
+}
+
+.content h2:nth-child(2) {
+  color: #5f7412;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+      clip-path: polygon(0% 45%,
+              16% 44%,
+              33% 50%,
+              54% 60%,
+              70% 61%,
+              84% 59%,
+              100% 52%,
+              100% 100%,
+              0% 100%);
+  }
+
+  50% {
+      clip-path: polygon(0% 60%,
+              15% 65%,
+              34% 66%,
+              51% 62%,
+              67% 50%,
+              84% 45%,
+              100% 46%,
+              100% 100%,
+              0% 100%);
+  }
+}
+
+.landing button {
+  font-size: 80px;
+  margin: 20px;
+  padding: 50px;
+  text-align:center;
+  color: #5f7412;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 31, 10, 0.83) 0%,
+    rgba(129, 25, 25, 0.082) 100%
+  );
+  letter-spacing: 18px;
+  text-shadow: -4px -4px 2px rgb(244, 238, 238), 4px 4px 2px #000, -4px 4px 2px #000, 4px -4px 2px #000;
+ 
+  cursor: pointer;
+  border-radius: 30px;
+  border-color: rgb(202, 220, 98);
+  border-style:groove;
+  border-bottom: 20px;
+  border-width: 10px;
+  
+  
+}
+
+.landing button:hover {
+  background-color: #1b0d0d;
+  box-shadow: 0px 15px 20px rgba(41, 19, 19, 0.4);
+  color: rgb(105, 23, 23);
+  transform: translateY(-7px);
+}
+
+.landing button:active {
+  transform: translateY(-1px);
+}

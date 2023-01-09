@@ -1,0 +1,187 @@
+
+
+
+
+.colorLetrasBienvenido{   
+    border-radius:30px;
+    border:5px solid black;
+    /* background-color: rgb(88, 85, 85); */
+    background-color: rgba(42, 41, 41, 0.698);
+    color: white;
+    margin: 1rem;
+    /* padding: 1rem; */
+    /* text-align: center; */
+    width: 600px;
+    /* height: 350px; */
+}
+
+.b{
+
+  color:white;
+}
+
+.a {
+
+  background: url(https://i.gifer.com/26ph.gif) no-repeat center center fixed;
+  background-size: cover;
+    height: 100vh;
+    width: 103.5%;
+    /* display: flex; */
+}
+
+.padre {
+    display: grid;
+    justify-content: center;
+  }
+.hijo {
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    text-shadow: black 1px 3px;
+        
+  }
+
+  .selectfont{
+    margin-top: 2rem;
+    color: #eed9b9;
+    text-shadow: 0 0 0.2rem#805a2e;
+    font-size: 30px;
+    width: fit-content;
+    padding: 0.8rem;
+    background: linear-gradient(
+      rgba(233, 153, 62, 0.486) 0%,
+      rgba(99, 36, 7, 0.76) 100%
+    );
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    
+  
+  }
+
+  .selectfont2{
+    margin-top: 2rem;
+    color: rgba(213, 213, 69, 0.747);
+    text-shadow: 0 0 1px rgba(240, 227, 227, 0.479);
+    width: 30rem;
+    height: 2.9rem;
+    font-size: 35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(
+      180deg,
+      rgba(11, 31, 10, 0.83) 0%,
+      rgba(129, 25, 25, 0.082) 100%
+      
+    );
+    border: 2px solid rgba(119, 89, 25, 0.6);
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+    
+  
+  
+
+
+  .selectfont:hover{
+   
+    transform: scale(1.05);
+    border: solid 2px lightseagreen;
+    box-shadow: 0px 5px lightseagreen;
+  
+    background-image: linear-gradient(to top, lightseagreen 0%, lightseagreen 100%);
+    
+ }
+ .selectfont:active {
+    transform: scale(0.9);
+} 
+  
+.selectfont2:hover{
+   
+  transform: scale(1.05);
+  border: solid 2px lightseagreen;
+  box-shadow: 0px 5px lightseagreen;
+
+  background-image: linear-gradient(to top, lightseagreen 0%, lightseagreen 100%);
+  
+}
+.selectfont2:active {
+  transform: scale(0.9);
+} 
+
+
+  .carddirectionhome{ 
+      display: grid;
+      font-size:21px;
+      /* background-color: royalblue; */
+      /* justify-content: left;  */
+      /* flex-direction: row */      
+    }
+
+    .selectfont3{
+   
+      background-image: url(../../Multimedia/piedra.webp) ;     
+     
+      background-size:cover;
+    
+      /* background-color: rgb(174, 177, 18); */
+      width: 2.3rem;
+      padding: 0.1rem 3rem;
+      border-radius: 100%;
+      border: 8px solid #575025;
+     
+      color: rgb(39, 8, 41);
+      font-family: impact;
+      font-size: 40px;
+      letter-spacing: 0;
+      text-shadow: -4px -4px 4px #dfcb5c, 4px -4px 4px #dfcb5c, -4px 4px 4px #dfcb5c, 4px 4px 4px #dfcb5c;
+      text-align:right;
+    
+  
+    
+      
+    
+    }
+  
+  
+    .selectfont3:hover{
+     
+      transform: scale(1.05);
+      border: solid 2px lightseagreen;
+      box-shadow: 0px 5px lightseagreen;
+    
+      background-image: linear-gradient(to top, lightseagreen 0%, lightseagreen 100%);
+      
+   }
+   .selectfont3:active {
+      transform: scale(0.9);
+  } 
+
+  .cc{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+  }
+
+  .gif{
+
+    margin-left: auto;
+     margin-right:auto;
+  }
+
+  @media (max-width: 500px) {
+    .divFiltros {
+        height: auto;
+        width: auto;
+    }
+  
+  }
+  
+  @media only screen and (min-width:501) and (max-width: 850px) {}
+  

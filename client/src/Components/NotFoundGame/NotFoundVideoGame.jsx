@@ -1,6 +1,6 @@
 import React from "react";
-import image from "../Multimedia/robot.png"
-import s from "./NotFoundVg.module.css";
+ import image from "../../Multimedia/notFound.gif"
+import "./NotFoundVg.css";
 
 
 
@@ -9,7 +9,8 @@ export default function NotFound() {
     return (
         <div>
             <div>
-                <img className={s.image} src={image} alt='' />
+                <img className="image" src={image} alt='' />
+                <h1 className="h1"> GENRE NOT FOUND </h1>
 
             </div>
         </div>

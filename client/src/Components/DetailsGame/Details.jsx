@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { getDetails, deleteGame } from "../../Redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import s from"./Details.module.css";
+import "./Details.css";
 
 export default function Detail(p) {
   const dispatch = useDispatch();
@@ -32,50 +32,50 @@ export default function Detail(p) {
   // console.log(info)
 
   return (
-    <div className={s.m}>
+    <div className="m">
       {info ? (
-        <div className={s.nq}>
+        <div className="nq">
           <div>
             
             <Link to={"/home"}>
-              <button className={s.buttton}>Back Home</button>
+              <button className="buttton">Back Home</button>
               
             </Link>
           </div>
 
           <div>
             <Link to="/home">
-            <button className={s.buttton2} onClick={deleteG} >Delete Game </button>
+            <button className="buttton2" onClick={deleteG} >Delete Game </button>
             </Link>
           </div>
       
 
-          <h1 className={s.detailName2}> Name: {info.name}</h1>
+          <h1 className="detailName2"> Name: {info.name}</h1>
 
-          <img className={s.im2} src={info.image} alt="img not found" />
+          <img className="im2" src={info.image} alt="img not found" />
 
           <h2> Rating: {info.rating}</h2>
 
           <h2>Released: {info.release_date} </h2>
 
-          <p className={s.plt}>
+          <p className="plt">
             {" "}
             Platforms:{" "}
             {info.plataform?.map((g, i) => {
               return (
-                <span className={s.span2} key={i}>
+                <span className="span2" key={i}>
                   {g?.platform?.name ?? g}{" "}
                 </span>
               );
             })}
           </p>
 
-          <p className={s.genr}>
+          <p className="genr">
             Genres :{" "}
             {info.genre?.map((ge, i) => {
               // console.log(ge)
               return (
-                <span className={s.genr} key={i}>
+                <span className="genr" key={i}>
                   {" "}
                   {ge.name ?? ge}{" "}
                 </span>
@@ -83,7 +83,7 @@ export default function Detail(p) {
             })}
           </p>
 
-          <h2 className={s.descr}> Description: {info.description} </h2>
+          <h2 className="descr"> Description: {info.description} </h2>
         </div>
       ) : <div></div>
       }

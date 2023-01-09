@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter, Route, Switch  } from 'react-router-dom';
-import LandingPage from './Components/LandingPage/LandingPage';
-import Home from './Components/Home/Home';
-import Details from './Components/DetailsGame/Details';
-import CreateGame from './Components/CreateGame/CreateGame';
-import NotFound from './Components/NotFound/NotFound.jsx';
+import LandingPage from './components/LandingPage/LandingPage';
+import Home from './components/Home/Home';
+import Details from './components/DetailsGame/Details';
+import CreateGame from './components/CreateGame/CreateGame';
+import NotFound from './components/NotFound/NotFound.jsx';
 
 
 function App() {

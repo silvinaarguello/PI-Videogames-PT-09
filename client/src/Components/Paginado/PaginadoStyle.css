@@ -1,0 +1,43 @@
+.nav_container{
+  position:absolute;
+bottom: 20px;
+left: 20%;
+}
+
+.ul_container{
+    padding: 0 0 5rem 30rem;
+}
+
+.li_container{
+    list-style: none;
+    float: left;
+    margin: 0.7rem;
+    text-align: center;
+    
+}
+
+.li_container button{
+  background-image: url(../../Multimedia/piedra.webp);
+  background-size:cover;
+    
+    /* background-color: rgb(174, 177, 18); */
+    width: 2.5rem;
+    padding: 1rem 2rem;
+    border-radius: 30%;
+    border: 2px solid #575025;
+    font-size: 40px;
+    color: rgb(39, 8, 41);
+    font-family: impact;
+    font-size: 40px;
+    letter-spacing: 0;
+    text-shadow: -4px -4px 4px #dfcb5c, 4px -4px 4px #dfcb5c, -4px 4px 4px #dfcb5c, 4px 4px 4px #dfcb5c;
+    text-align:justify;
+
+}
+
+.li_container button:hover{
+    background-color: rgb(18, 100, 29);
+    color: #e7eeee;
+    border-color: rgb(99, 100, 18);
+
+}
