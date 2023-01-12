@@ -192,6 +192,7 @@ export default function Home() {
           gamesPage={gamesPage}
           allGames={allGames?.length}
           paginado={paginado}
+          currentPage={currentPage}
         />
       </div>
     </div>

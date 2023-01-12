@@ -15,7 +15,11 @@ export default function SearchBar() {
   }
   function handleSubmit(p) {
     p.preventDefault();
-    dispatch(getNameVideoGames(name));
+    if(name.length > 1) {
+      dispatch(getNameVideoGames(name))
+      setName('')
+    }else
+    alert('No se encontró El nombre buscado')
   }
 
   return (
@@ -23,7 +27,10 @@ export default function SearchBar() {
       <form onSubmit={(p) => handleSubmit(p)}>
         <input
           className="search"
-          type="text"
+          type='text'
+           id="rating"
+            autoComplete="off"
+            value={name}
           placeholder="Search game..."
           onChange={(p) => handInputChange(p)}
         />

@@ -1,7 +1,7 @@
 .nav_container{
   position:absolute;
-bottom: 20px;
-left: 20%;
+bottom: 1195px;
+left: -13%;
 }
 
 .ul_container{
@@ -19,6 +19,7 @@ left: 20%;
 .li_container button{
   background-image: url(../../Multimedia/piedra.webp);
   background-size:cover;
+
     
     /* background-color: rgb(174, 177, 18); */
     width: 2.5rem;
@@ -41,3 +42,4 @@ left: 20%;
     border-color: rgb(99, 100, 18);
 
 }
+

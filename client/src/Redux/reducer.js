@@ -40,7 +40,7 @@ export default function rootReducer(state = initialState, action) {
  
 
     case "FILTER_BY_GENRE":
-      const allStateGames = state.allVideoGames;
+       const allStateGames = state.allVideoGames;
       const tempGames = allStateGames.filter((p) => {
         if (p.genre) {
           const genres = p.genre;
@@ -51,6 +51,15 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         videogames: action.payload === "sinFiltro" ? allStateGames : tempGames,
       };
+
+      // const allStateGames = state.allVideoGames;
+      // const tempGames = action.payload === 'all'
+      //   ? allStateGames
+      //   : allStateGames.filter((p) => p.genres.includes(action.payload));
+      //   return {
+      //     ...state,
+      //     videogames: action.payload === "sinFiltro" ? allStateGames : tempGames,}
+          
 
     case "SUBMIT_GAME":
       return {
@@ -143,5 +152,5 @@ export default function rootReducer(state = initialState, action) {
       };
     default:
       return state;
-  }
-}
+  };
+};

@@ -1,3 +1,4 @@
+
 import axios from "axios";
 
 
@@ -59,7 +60,7 @@ export function getNameVideoGames(name){
       var json = await   axios
       .get(`http://localhost:3001/videogames?name=${name}`)
       return dispatch({
-        type: "GET_VIDOEGAMES_QUERY",
+        type: "GET_VIDEOGAMES_QUERY",
         payload: json.data
       })
     } catch (error) {
