@@ -175,6 +175,30 @@ router.delete("/videogames/:id", async(req,res)=>{
   }
 })
 
+// router.put("/videogames/:id", async(req,res)=>{
+//   try {
+//     const {id}=req.params.id;
+
+//     const {name,description,release_date,rating,plataform,genre,image}=req.body;
+//     const update = await Videogame.findByPk
+//     if(update){
+//       await update.update({
+//         name,
+//         description,
+//         release_date,
+//         rating,
+//         plataform,
+//         genre,
+//         image,
+//       })
+//       return res.send("game updated")
+//     }
+//     res.status(404).send("cant update this game")
+//   } catch (error) {
+//     console.log(error)
+//   }           
+// })
+ 
 
 
 module.exports = router;
